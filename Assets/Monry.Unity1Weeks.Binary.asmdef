@@ -1,0 +1,16 @@
+{
+    "name": "Monry.Unity1Weeks.Binary",
+    "references": [
+        "umm@unirx",
+        "umm@cafu_core@v3",
+        "Zenject"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}
