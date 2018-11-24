@@ -3,7 +3,8 @@
     "references": [
         "umm@unirx",
         "umm@cafu_core@v3",
-        "Zenject"
+        "Zenject",
+        "umm@extra_linq"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],
