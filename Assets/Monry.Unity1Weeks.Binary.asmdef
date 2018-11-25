@@ -4,7 +4,8 @@
         "umm@unirx",
         "umm@cafu_core@v3",
         "Zenject",
-        "umm@extra_linq"
+        "umm@extra_linq",
+        "Unity.TextMeshPro"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],
