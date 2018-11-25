@@ -45,10 +45,10 @@ namespace Monry.Unity1Weeks.Binary.Presentation.View.Main
                 this
                     .OnPointerDownAsObservable()
                     .Subscribe(_ => DestroyWithSubBits());
-                for (var i = 0; i < (int) Attribute.SpreadRange - 1; i++)
+                for (var i = 0; i < (int) Attribute.SpreadRange; i++)
                 {
-                    SpawnSubBit(i);
-                    SpawnSubBit(-i);
+                    SpawnSubBit(i + 1);
+                    SpawnSubBit(-i - 1);
                 }
             }
 
