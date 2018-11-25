@@ -3,6 +3,7 @@ using Monry.Unity1Weeks.Binary.Domain.UseCase;
 using Monry.Unity1Weeks.Binary.Presentation.Presenter;
 using Monry.Unity1Weeks.Binary.Presentation.View.Main;
 using Monry.Unity1Weeks.Binary.Structure;
+using UniRx;
 using UnityEngine;
 using Zenject;
 
@@ -58,6 +59,11 @@ namespace Monry.Unity1Weeks.Binary.Application.Installer
             Container
                 .BindInterfacesTo<Controller>()
                 .FromInstance(Controller)
+                .AsCached();
+
+            // Others
+            Container
+                .BindInterfacesTo<MessageBroker>()
                 .AsCached();
         }
     }

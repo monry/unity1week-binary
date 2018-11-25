@@ -15,6 +15,12 @@ namespace Monry.Unity1Weeks.Binary.Application
                 {GravityScale.High, 1.0f/1},
             };
 
+            public static IDictionary<bool, Color> FilledDigitColorMap { get; } = new Dictionary<bool, Color>
+            {
+                {true, Color.black},
+                {false, Color.clear},
+            };
+
             public static IDictionary<SpreadRange, IDictionary<bool, Color>> SpreadRangeColorMap { get; } = new Dictionary<SpreadRange, IDictionary<bool, Color>>
             {
                 {

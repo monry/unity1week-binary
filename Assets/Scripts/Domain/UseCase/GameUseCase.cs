@@ -1,4 +1,5 @@
 using CAFU.Core;
+using Monry.Unity1Weeks.Binary.Application.Enum;
 using Monry.Unity1Weeks.Binary.Domain.Entity;
 using UniRx;
 using Zenject;
@@ -15,9 +16,11 @@ namespace Monry.Unity1Weeks.Binary.Domain.UseCase
         [Inject] private IScoreEntity ScoreEntity { get; set; }
         [Inject] private IGameStateHandler GameStateHandler { get; set; }
         [Inject] private IBitSpawner BitSpawner { get; set; }
+        [Inject] private IMessagePublisher MessagePublisher { get; set; }
 
         void IInitializable.Initialize()
         {
+            MessagePublisher.Publish(GameState.Ready);
             GameStateHandler
                 .OnGameStartAsObservable()
                 .Subscribe(
@@ -25,6 +28,7 @@ namespace Monry.Unity1Weeks.Binary.Domain.UseCase
                     {
                         TimerEntity.Start();
                         BitSpawner.SpawnStart();
+                        MessagePublisher.Publish(GameState.Started);
                     }
                 );
             TimerEntity
@@ -40,6 +44,7 @@ namespace Monry.Unity1Weeks.Binary.Domain.UseCase
                         TimerEntity.Stop();
                         BitSpawner.SpawnStop();
                         ScoreEntity.SendScore();
+                        MessagePublisher.Publish(GameState.Finished);
                     }
                 );
         }
