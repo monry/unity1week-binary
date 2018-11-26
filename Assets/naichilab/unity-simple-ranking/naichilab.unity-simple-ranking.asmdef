@@ -1,12 +1,7 @@
 {
-    "name": "Monry.Unity1Weeks.Binary",
+    "name": "naichilab.unity-simple-ranking",
     "references": [
-        "umm@unirx",
-        "umm@cafu_core@v3",
-        "Zenject",
-        "umm@extra_linq",
-        "Unity.TextMeshPro",
-        "naichilab.unity-simple-ranking"
+        "NCMB"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],

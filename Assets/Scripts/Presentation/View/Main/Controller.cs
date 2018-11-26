@@ -1,15 +1,26 @@
-using System;
-using Monry.Unity1Weeks.Binary.Presentation.Presenter;
+using Monry.Unity1Weeks.Binary.Application.Enum;
 using UniRx;
 using UnityEngine;
+using Zenject;
 
 namespace Monry.Unity1Weeks.Binary.Presentation.View.Main
 {
-    public class Controller : MonoBehaviour, IGameStarter
+    public class Controller : MonoBehaviour
     {
-        IObservable<Unit> IGameStarter.OnGameStartAsObservable()
+        [Inject] private ButtonStart ButtonStart { get; set; }
+        [Inject] private ButtonRetry ButtonRetry { get; set; }
+        [Inject] private IMessageReceiver MessageReceiver { get; set; }
+
+        private void Start()
         {
-            return Observable.ReturnUnit();
+            MessageReceiver
+                .Receive<GameState>()
+                .Where(x => x == GameState.Started)
+                .Subscribe(_ => Destroy(ButtonStart.gameObject));
+            MessageReceiver
+                .Receive<GameState>()
+                .Where(x => x == GameState.Finished)
+                .Subscribe(_ => ButtonRetry.gameObject.SetActive(true));
         }
     }
 }
