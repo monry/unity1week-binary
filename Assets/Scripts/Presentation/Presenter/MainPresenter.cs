@@ -81,7 +81,6 @@ namespace Monry.Unity1Weeks.Binary.Presentation.Presenter
                 new BitAttribute
                 {
                     Digit = Random.Range(0, Const.TotalDigit),
-                    GravityScale = EnumUtility.GetRandom<GravityScale>(),
                     SpreadRange = EnumUtility.GetRandom<SpreadRange>(),
                 }
             );

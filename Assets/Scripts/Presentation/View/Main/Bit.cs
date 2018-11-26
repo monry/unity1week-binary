@@ -91,7 +91,6 @@ namespace Monry.Unity1Weeks.Binary.Presentation.View.Main
                             new BitAttribute
                             {
                                 Digit = Attribute.Digit + distance,
-                                GravityScale = Attribute.GravityScale,
                                 IsSubBit = true,
                                 SpreadRange = Attribute.SpreadRange,
                             }

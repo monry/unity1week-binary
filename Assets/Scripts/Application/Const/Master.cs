@@ -8,13 +8,6 @@ namespace Monry.Unity1Weeks.Binary.Application
     {
         public static class Master
         {
-            public static IDictionary<GravityScale, float> GravityScaleMap { get; } = new Dictionary<GravityScale, float>
-            {
-                {GravityScale.Low, 1.0f/4},
-                {GravityScale.Medium, 1.0f/2},
-                {GravityScale.High, 1.0f/1},
-            };
-
             public static IDictionary<bool, Color> FilledDigitColorMap { get; } = new Dictionary<bool, Color>
             {
                 {true, Color.black},

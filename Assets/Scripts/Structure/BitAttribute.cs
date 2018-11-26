@@ -7,7 +7,6 @@ namespace Monry.Unity1Weeks.Binary.Structure
     {
         public int Digit;
         public SpreadRange SpreadRange;
-        public GravityScale GravityScale;
         public bool IsSubBit;
     }
 }

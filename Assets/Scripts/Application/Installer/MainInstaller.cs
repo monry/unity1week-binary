@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Monry.Unity1Weeks.Binary.Domain.Entity;
 using Monry.Unity1Weeks.Binary.Domain.UseCase;
 using Monry.Unity1Weeks.Binary.Presentation.Presenter;
@@ -65,6 +66,14 @@ namespace Monry.Unity1Weeks.Binary.Application.Installer
             Container
                 .BindInterfacesTo<MessageBroker>()
                 .AsCached();
+        }
+
+        [SuppressMessage("ReSharper", "ObjectCreationAsStatement")]
+        [SuppressMessage("ReSharper", "UnusedMember.Global")]
+        public static void WorkAround()
+        {
+            new PlaceholderFactory<int, Digit>();
+            new PlaceholderFactory<BitAttribute, Bit>();
         }
     }
 }
