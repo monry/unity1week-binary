@@ -1,0 +1,14 @@
+{
+    "name": "naichilab.unity-simple-ranking",
+    "references": [
+        "NCMB"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}
