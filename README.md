@@ -11,7 +11,21 @@ git clone git@github.com:monry/unity1week-binary.git
 yarn install
 ```
 
+## Used assets
+
+* [CAFU v3](https://github.com/umm/cafu_core)
+* [UniRx](https://github.com/neuecc/UniRx)
+* [Zenject](https://github.com/svermeulen/Zenject)
+* [unity-simple-ranking](https://github.com/naichilab/unity-simple-ranking)
+    * [NCMB SDK](https://github.com/NIFCloud-mbaas/ncmb_unity)
+
 ## Links
 
 * [Binary | 無料ゲーム投稿サイト unityroom - Unityのゲームをアップロードして公開しよう](https://unityroom.com/games/binary)
 * [Unity 1週間ゲームジャム | 無料ゲーム投稿サイト unityroom - Unityのゲームをアップロードして公開しよう](https://unityroom.com/unity1weeks)
+
+## License
+
+[MIT License](LICENSE.txt)
+
+各使用アセットのライセンスは、それぞれの宣言に準じます。
